@@ -11,6 +11,28 @@
 		85B464AC272EC0C30007255C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464AB272EC0C30007255C /* ContentView.swift */; };
 		85B464AE272EC0C60007255C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B464AD272EC0C60007255C /* Assets.xcassets */; };
 		85B464B1272EC0C60007255C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B464B0272EC0C60007255C /* Preview Assets.xcassets */; };
+		85B464B9272EC0E20007255C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464B8272EC0E20007255C /* NetworkService.swift */; };
+		85B464BC272EC1280007255C /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 85B464BB272EC1280007255C /* SwiftDate */; };
+		85B464BF272EC15E0007255C /* PureSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 85B464BE272EC15E0007255C /* PureSwiftUI */; };
+		85B464C2272EC16C0007255C /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 85B464C1272EC16C0007255C /* SwiftUIX */; };
+		85B464C5272EC1770007255C /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 85B464C4272EC1770007255C /* DynamicColor */; };
+		85B464C8272EC1830007255C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 85B464C7272EC1830007255C /* Alamofire */; };
+		85B464D0272EC2F20007255C /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464CC272EC2F20007255C /* Fonts.swift */; };
+		85B464D1272EC2F20007255C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464CD272EC2F20007255C /* Colors.swift */; };
+		85B464D2272EC2F20007255C /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464CE272EC2F20007255C /* ButtonStyles.swift */; };
+		85B464D3272EC2F20007255C /* TFStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464CF272EC2F20007255C /* TFStyles.swift */; };
+		85B464D5272EC3640007255C /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464D4272EC3640007255C /* MainScreen.swift */; };
+		85B464D7272EC36D0007255C /* MainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464D6272EC36D0007255C /* MainScreenModel.swift */; };
+		85B464DA272ECA2C0007255C /* AlamofireNetworkActivityLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 85B464D9272ECA2C0007255C /* AlamofireNetworkActivityLogger */; };
+		85B464DC272ECB1B0007255C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464DB272ECB1B0007255C /* CardView.swift */; };
+		85B464DF272ECBDA0007255C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 85B464DE272ECBDA0007255C /* SDWebImageSwiftUI */; };
+		85B464E3272ED6E20007255C /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464E1272ED6E20007255C /* ProfileScreen.swift */; };
+		85B464E4272ED6E20007255C /* ProfileScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464E2272ED6E20007255C /* ProfileScreenModel.swift */; };
+		85B464E8272EDFC30007255C /* UserScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464E6272EDFC20007255C /* UserScreen.swift */; };
+		85B464ED272EE4220007255C /* ChatScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464EB272EE4220007255C /* ChatScreenModel.swift */; };
+		85B464EE272EE4220007255C /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464EC272EE4220007255C /* ChatScreen.swift */; };
+		85B464F3272EEE440007255C /* OneChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464F1272EEE440007255C /* OneChatScreen.swift */; };
+		85B464F4272EEE440007255C /* OneChatScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464F2272EEE440007255C /* OneChatScreenModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +41,21 @@
 		85B464AB272EC0C30007255C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		85B464AD272EC0C60007255C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85B464B0272EC0C60007255C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		85B464B8272EC0E20007255C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		85B464CC272EC2F20007255C /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		85B464CD272EC2F20007255C /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		85B464CE272EC2F20007255C /* ButtonStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		85B464CF272EC2F20007255C /* TFStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFStyles.swift; sourceTree = "<group>"; };
+		85B464D4272EC3640007255C /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		85B464D6272EC36D0007255C /* MainScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenModel.swift; sourceTree = "<group>"; };
+		85B464DB272ECB1B0007255C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		85B464E1272ED6E20007255C /* ProfileScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		85B464E2272ED6E20007255C /* ProfileScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileScreenModel.swift; sourceTree = "<group>"; };
+		85B464E6272EDFC20007255C /* UserScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserScreen.swift; sourceTree = "<group>"; };
+		85B464EB272EE4220007255C /* ChatScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatScreenModel.swift; sourceTree = "<group>"; };
+		85B464EC272EE4220007255C /* ChatScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
+		85B464F1272EEE440007255C /* OneChatScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneChatScreen.swift; sourceTree = "<group>"; };
+		85B464F2272EEE440007255C /* OneChatScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneChatScreenModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +63,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85B464DF272ECBDA0007255C /* SDWebImageSwiftUI in Frameworks */,
+				85B464C8272EC1830007255C /* Alamofire in Frameworks */,
+				85B464C5272EC1770007255C /* DynamicColor in Frameworks */,
+				85B464C2272EC16C0007255C /* SwiftUIX in Frameworks */,
+				85B464DA272ECA2C0007255C /* AlamofireNetworkActivityLogger in Frameworks */,
+				85B464BF272EC15E0007255C /* PureSwiftUI in Frameworks */,
+				85B464BC272EC1280007255C /* SwiftDate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +95,9 @@
 		85B464A8272EC0C30007255C /* mad_autumn_2021_third */ = {
 			isa = PBXGroup;
 			children = (
+				85B464CB272EC2D50007255C /* Common */,
+				85B464C9272EC2860007255C /* Screens */,
+				85B464B7272EC0D70007255C /* Services */,
 				85B464A9272EC0C30007255C /* mad_autumn_2021_thirdApp.swift */,
 				85B464AB272EC0C30007255C /* ContentView.swift */,
 				85B464AD272EC0C60007255C /* Assets.xcassets */,
@@ -65,6 +112,82 @@
 				85B464B0272EC0C60007255C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		85B464B7272EC0D70007255C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				85B464B8272EC0E20007255C /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		85B464C9272EC2860007255C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				85B464F0272EEE1B0007255C /* OneChat */,
+				85B464EA272EE3E20007255C /* Chat */,
+				85B464E5272EDF990007255C /* User */,
+				85B464E0272ED6C30007255C /* Profile */,
+				85B464CA272EC28F0007255C /* Main */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		85B464CA272EC28F0007255C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				85B464D4272EC3640007255C /* MainScreen.swift */,
+				85B464D6272EC36D0007255C /* MainScreenModel.swift */,
+				85B464DB272ECB1B0007255C /* CardView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		85B464CB272EC2D50007255C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				85B464CE272EC2F20007255C /* ButtonStyles.swift */,
+				85B464CD272EC2F20007255C /* Colors.swift */,
+				85B464CC272EC2F20007255C /* Fonts.swift */,
+				85B464CF272EC2F20007255C /* TFStyles.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		85B464E0272ED6C30007255C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				85B464E1272ED6E20007255C /* ProfileScreen.swift */,
+				85B464E2272ED6E20007255C /* ProfileScreenModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		85B464E5272EDF990007255C /* User */ = {
+			isa = PBXGroup;
+			children = (
+				85B464E6272EDFC20007255C /* UserScreen.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		85B464EA272EE3E20007255C /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				85B464EC272EE4220007255C /* ChatScreen.swift */,
+				85B464EB272EE4220007255C /* ChatScreenModel.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		85B464F0272EEE1B0007255C /* OneChat */ = {
+			isa = PBXGroup;
+			children = (
+				85B464F1272EEE440007255C /* OneChatScreen.swift */,
+				85B464F2272EEE440007255C /* OneChatScreenModel.swift */,
+			);
+			path = OneChat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +206,15 @@
 			dependencies = (
 			);
 			name = mad_autumn_2021_third;
+			packageProductDependencies = (
+				85B464BB272EC1280007255C /* SwiftDate */,
+				85B464BE272EC15E0007255C /* PureSwiftUI */,
+				85B464C1272EC16C0007255C /* SwiftUIX */,
+				85B464C4272EC1770007255C /* DynamicColor */,
+				85B464C7272EC1830007255C /* Alamofire */,
+				85B464D9272ECA2C0007255C /* AlamofireNetworkActivityLogger */,
+				85B464DE272ECBDA0007255C /* SDWebImageSwiftUI */,
+			);
 			productName = mad_autumn_2021_third;
 			productReference = 85B464A6272EC0C30007255C /* mad_autumn_2021_third.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +243,15 @@
 				Base,
 			);
 			mainGroup = 85B4649D272EC0C30007255C;
+			packageReferences = (
+				85B464BA272EC1280007255C /* XCRemoteSwiftPackageReference "SwiftDate" */,
+				85B464BD272EC15E0007255C /* XCRemoteSwiftPackageReference "pure-swift-ui" */,
+				85B464C0272EC16C0007255C /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+				85B464C3272EC1770007255C /* XCRemoteSwiftPackageReference "DynamicColor" */,
+				85B464C6272EC1820007255C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				85B464D8272ECA2C0007255C /* XCRemoteSwiftPackageReference "AlamofireNetworkActivityLogger" */,
+				85B464DD272ECBDA0007255C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 85B464A7272EC0C30007255C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +278,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85B464F3272EEE440007255C /* OneChatScreen.swift in Sources */,
+				85B464D5272EC3640007255C /* MainScreen.swift in Sources */,
+				85B464EE272EE4220007255C /* ChatScreen.swift in Sources */,
+				85B464D0272EC2F20007255C /* Fonts.swift in Sources */,
+				85B464D2272EC2F20007255C /* ButtonStyles.swift in Sources */,
+				85B464D3272EC2F20007255C /* TFStyles.swift in Sources */,
+				85B464E8272EDFC30007255C /* UserScreen.swift in Sources */,
+				85B464E3272ED6E20007255C /* ProfileScreen.swift in Sources */,
+				85B464E4272ED6E20007255C /* ProfileScreenModel.swift in Sources */,
+				85B464DC272ECB1B0007255C /* CardView.swift in Sources */,
+				85B464D1272EC2F20007255C /* Colors.swift in Sources */,
+				85B464ED272EE4220007255C /* ChatScreenModel.swift in Sources */,
 				85B464AC272EC0C30007255C /* ContentView.swift in Sources */,
+				85B464B9272EC0E20007255C /* NetworkService.swift in Sources */,
 				85B464AA272EC0C30007255C /* mad_autumn_2021_thirdApp.swift in Sources */,
+				85B464D7272EC36D0007255C /* MainScreenModel.swift in Sources */,
+				85B464F4272EEE440007255C /* OneChatScreenModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +497,103 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		85B464BA272EC1280007255C /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		85B464BD272EC15E0007255C /* XCRemoteSwiftPackageReference "pure-swift-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CodeSlicing/pure-swift-ui.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		85B464C0272EC16C0007255C /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.9;
+			};
+		};
+		85B464C3272EC1770007255C /* XCRemoteSwiftPackageReference "DynamicColor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yannickl/DynamicColor.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		85B464C6272EC1820007255C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		85B464D8272ECA2C0007255C /* XCRemoteSwiftPackageReference "AlamofireNetworkActivityLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/konkab/AlamofireNetworkActivityLogger.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		85B464DD272ECBDA0007255C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		85B464BB272EC1280007255C /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B464BA272EC1280007255C /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
+		};
+		85B464BE272EC15E0007255C /* PureSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B464BD272EC15E0007255C /* XCRemoteSwiftPackageReference "pure-swift-ui" */;
+			productName = PureSwiftUI;
+		};
+		85B464C1272EC16C0007255C /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B464C0272EC16C0007255C /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+		85B464C4272EC1770007255C /* DynamicColor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B464C3272EC1770007255C /* XCRemoteSwiftPackageReference "DynamicColor" */;
+			productName = DynamicColor;
+		};
+		85B464C7272EC1830007255C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B464C6272EC1820007255C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		85B464D9272ECA2C0007255C /* AlamofireNetworkActivityLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B464D8272ECA2C0007255C /* XCRemoteSwiftPackageReference "AlamofireNetworkActivityLogger" */;
+			productName = AlamofireNetworkActivityLogger;
+		};
+		85B464DE272ECBDA0007255C /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B464DD272ECBDA0007255C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 85B4649E272EC0C30007255C /* Project object */;
 }
