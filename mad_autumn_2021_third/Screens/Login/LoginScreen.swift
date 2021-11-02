@@ -30,7 +30,7 @@ struct LoginScreen: View {
                 }.buttonStyle(BS.general).padding(.bottom, 58)
             }.padding(.horizontal, 16).navigationBarTransparent(true)
             
-            MyActivityIndicator(isLoading: vm.isLoading)
+            
         }.navigationBarTransparent(true).navigationBarTitle("", displayMode: .inline)
     
     }

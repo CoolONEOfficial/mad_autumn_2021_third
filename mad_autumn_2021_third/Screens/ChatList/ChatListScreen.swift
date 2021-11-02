@@ -9,9 +9,9 @@ import SwiftUI
 import SwiftUIX
 import SDWebImageSwiftUI
 
-struct ChatScreen: View {
+struct ChatListScreen: View {
     
-    @StateObject var vm: ChatScreenModel
+    @StateObject var vm: ChatListScreenModel
     
 //    @State var offset = CGPoint(x: 0, y: 0)
 //    
@@ -20,7 +20,7 @@ struct ChatScreen: View {
     @State var openChat = false
     @State var chat: ChatModel?
     
-    @EnvironmentObject var alert: AlertInfo
+    @EnvironmentObject var notifications: Notifications
     
     var body: some View {
        // NavigationView {
@@ -31,14 +31,14 @@ struct ChatScreen: View {
                     LazyVStack(alignment: .leading) {
                         Text("Last").font(.plain).fontSize(36).foregroundColor(.white)
                         
-                        ScrollView(.horizontal) {
+                        ScrollView(.horizontal, showsIndicators: false) {
                             LazyHStack(spacing: 16) {
                                 ForEach(enumerating: Array(vm.liked.sorted { $0.name < $1.name }.enumerated()), id: \.offset) { index, entry in
                                     let user = entry.element
                                     VStack(spacing: 8) {
-                                        WebImage(url: user.avatar).resizable().scaledToFill().height(82).width(82).cornerRadius(41)
-                                        Text(user.name).font(.plain).fontSize(14).foregroundColor(.white)
-                                    }
+                                        WebImage(url: user.avatar).resizable().scaledToFill().background(Color.darkOrange).cornerRadius(41).height(82)
+                                        Text(user.name).font(.plain).foregroundColor(.white)
+                                    }.width(82)
                                 }
                             }
                         }.height(115)
@@ -63,12 +63,11 @@ struct ChatScreen: View {
                     }
                     if let chat = chat {
                     NavigationLink("", isActive: $openChat) {
-                        OneChatScreen(vm: .init(alert, chat ))
-                        
+                        ChatScreen(vm: .init(notifications, chat ))
                     }.hidden()
                     }
                 }.padding(.horizontal, 21)
-                MyActivityIndicator(isLoading: vm.isLoading)
+                
                 
             }.navigationBarHidden(true)
             .onAppear {

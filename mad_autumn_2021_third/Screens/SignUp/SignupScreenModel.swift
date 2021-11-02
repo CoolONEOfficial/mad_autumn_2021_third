@@ -13,27 +13,26 @@ class SignupScreenModel: ViewModel {
     @Published var email = ""
     @Published var pass = ""
     @Published var passConfirm = ""
-    @Published var isLoading = false
     
     func signUp() {
         guard email.contains("."), email.contains("@") else {
-            alert.info = "Incorrect email"
+            notifications.alert = "Incorrect email"
             return
         }
         guard pass == passConfirm else {
-            alert.info = "Passes not match"
+            notifications.alert = "Passes not match"
             return
         }
         guard pass.isNotEmpty else {
-            alert.info = "Passes is empty"
+            notifications.alert = "Passes is empty"
             return
         }
         
-        isLoading = true
+        notifications.isLoading = true
         nw.authSignup(email: email, pass: pass) { [self] err in
-            isLoading = false
+            notifications.isLoading = false
             if let err = err {
-                alert.info = "Something went wrong!"
+                notifications.alert = "Something went wrong!"
                 }
         }
     }

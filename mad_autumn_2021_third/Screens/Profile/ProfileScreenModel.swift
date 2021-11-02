@@ -12,7 +12,6 @@ import SwiftUIX
 
 class ProfileScreenModel: ViewModel {
     let nm = NetworkService.shared
-    @Published var isLoading = false
     
     @Published var party: String? = UserDefaults.standard.string(forKey: "party") {
         didSet {
@@ -27,10 +26,10 @@ class ProfileScreenModel: ViewModel {
 ////            return
 ////        }
 ////
-////        isLoading = true
+////        notifications.isLoading = true
 ////
 ////        nm.users { [self] res in
-////            isLoading = false
+////            notifications.isLoading = false
 ////            switch res {
 ////            case let .success(users):
 ////                self.users = users
@@ -58,7 +57,7 @@ class ProfileScreenModel: ViewModel {
 //            users.remove(at: 0)
 //        }
 //        
-//        isLoading = true
+//        notifications.isLoading = true
 //        nm.feedback(feedback, userId: userId) { res in
 //            self.isLoading = false
 //            

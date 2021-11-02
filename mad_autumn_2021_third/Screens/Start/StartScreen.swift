@@ -16,7 +16,7 @@ struct StartScreen: View {
     @State var signup = false
     @State var login = false
     
-    @EnvironmentObject var alert: AlertInfo
+    @EnvironmentObject var notifications: Notifications
     
     var body: some View {
         NavigationView {
@@ -24,8 +24,11 @@ struct StartScreen: View {
                 Color.background.ignoresSafeArea()
                 VStack(spacing: 0) {
                     ZStack {
-                        Image("previewText") // TODO: anims
-                    }.maxHeight(.infinity)
+                        Image("previewText")
+                        ForEach(Range(1...6)) { index in
+                            MovingAvatar(name: "start\(index)").padding(.horizontal, -16)
+                        }
+                    }
                     
                     Button("Sign up") {
                         signup = true
@@ -37,14 +40,14 @@ struct StartScreen: View {
                         login = true
                     }.buttonStyle(BS.underlined).padding(.bottom, 37)
                     NavigationLink("", isActive: $signup, destination: {
-                        SignupScreen(vm: .init(alert))
+                        SignupScreen(vm: .init(notifications))
                     }).hidden()
                     NavigationLink("", isActive: $login, destination: {
-                        LoginScreen(vm: .init(alert))
+                        LoginScreen(vm: .init(notifications))
                     }).hidden()
                 }.ignoresSafeArea(SafeAreaRegions.all, edges: .top).padding(.horizontal, 16).navigationBarTransparent(true)
                 
-                MyActivityIndicator(isLoading: vm.isLoading)
+                
             }.navigationTitle("")
         }.onAppear {
             vm.checkToken()

@@ -10,16 +10,15 @@ import SwiftUI
 
 class StartScreenModel: ViewModel {
     let nw = NetworkService.shared
-    var isLoading = false
     
     func checkToken() {
         if nw.token?.accessTokenDate?.isInPast == true, let refresh = nw.token?.refreshToken, nw.token?.refreshTokenDate?.isInFuture == true {
-            isLoading = true
+            notifications.isLoading = true
             
             nw.refreshToken { [self] err in
-                isLoading = false
+                notifications.isLoading = false
                 if let err = err {
-                    alert.info = "Refresh failed"
+                    notifications.alert = "Refresh failed"
                 }
             }
         }

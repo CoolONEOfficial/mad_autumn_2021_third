@@ -14,26 +14,26 @@ struct TabbedView: View {
         case chat
         
         @ViewBuilder
-        func screen(_ alert: AlertInfo) -> some View {
+        func screen(_ notifications: Notifications) -> some View {
             switch self {
             case .main:
-                MainScreen(vm: .init(alert))
+                MainScreen(vm: .init(notifications))
                 
             case .chat:
-                ChatScreen(vm: .init(alert))
+                ChatListScreen(vm: .init(notifications))
             }
         }
     }
 
     @State var tab: Tab = .main
     
-    @EnvironmentObject var alert: AlertInfo
+    @EnvironmentObject var notifications: Notifications
 
     var body: some View {
         NavigationView {
             ZStack(alignment: .top) {
                 Rectangle().ignoresSafeArea()
-                tab.screen(alert)
+                tab.screen(notifications)
                 VStack(spacing: 0) {
                     Spacer()
                     HStack {
@@ -50,7 +50,7 @@ struct TabbedView: View {
                         }
                         Spacer()
                         NavigationLink(destination: {
-                            ProfileScreen(vm: .init(alert))
+                            ProfileScreen(vm: .init(notifications))
                         }, label: {
                             Image("profile").resizable().scaledToFit().height(26)
                         })

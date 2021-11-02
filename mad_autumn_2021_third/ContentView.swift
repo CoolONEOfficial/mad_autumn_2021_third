@@ -10,7 +10,7 @@ import SwiftUIX
 
 struct ContentView: View {
 
-    @StateObject var alert: AlertInfo = .init(nil)
+    @StateObject var notifications = Notifications()
     
     init() {
         UINavigationBar.appearance().tintColor = .white
@@ -33,17 +33,19 @@ struct ContentView: View {
         if networkService.token?.accessToken != nil, networkService.token?.accessTokenDate?.isInFuture == true {
             TabbedView()
         } else {
-            StartScreen(vm: .init(alert))
+            StartScreen(vm: .init(notifications))
         }
     }
     
     var body: some View {
-        content.environmentObject(alert).alert(isPresented: .init(get: {
-            alert.info != nil
+        content.environmentObject(notifications).alert(isPresented: .init(get: {
+            notifications.alert != nil
         }, set: {
-            alert.info = $0 ? alert.info : nil
+            notifications.alert = $0 ? notifications.alert : nil
         })) {
-            alert.info ?? .init(title: Text(""), message: nil, dismissButton: nil)
+            notifications.alert ?? .init(title: Text(""), message: nil, dismissButton: nil)
+        }.overlay {
+            MyActivityIndicator(isLoading: notifications.isLoading)
         }
     }
 }

@@ -9,30 +9,29 @@ import Foundation
 import Alamofire
 import SwiftUI
 
-class OneChatScreenModel: ObservableObject {
+class ChatScreenModel: ObservableObject {
     
     let chatModel: ChatModel
     
     let nm = NetworkService.shared
-    @Published var isLoading = false
     
     @Published var messages: [MessageModel] = []
     
-    var alert: AlertInfo
+    var notifications: Notifications
     
-    init(_ alert: AlertInfo, _ chatModel: ChatModel) {
-        self.alert = alert
+    init(_ notifications: Notifications, _ chatModel: ChatModel) {
+        self.notifications = notifications
         self.chatModel = chatModel
 
-        isLoading = true
+        notifications.isLoading = true
         nm.messages(chatId: chatModel.chat.id) { [self] res in
-            self.isLoading = false
+            self.notifications.isLoading = false
             switch res {
             case let .success(messages): break
                 self.messages = messages
                 
             case let .failure(err):
-                self.alert.info = "Ошибка при получении сообщений"
+                self.notifications.alert = "Ошибка при получении сообщений"
             }
         }
     }

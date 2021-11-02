@@ -44,7 +44,7 @@ struct ProfileScreen: View {
                         save()
                     }.buttonStyle(BS.general)
                 }.padding(.horizontal, 21)
-                MyActivityIndicator(isLoading: vm.isLoading)
+                
             }.navigationBarHidden(true)
             
         }

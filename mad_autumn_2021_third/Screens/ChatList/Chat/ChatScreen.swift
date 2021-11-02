@@ -9,9 +9,9 @@ import SwiftUI
 import SwiftUIX
 import SDWebImageSwiftUI
 
-struct OneChatScreen: View {
+struct ChatScreen: View {
     
-    @StateObject var vm: OneChatScreenModel
+    @StateObject var vm: ChatScreenModel
     
 //    @State var offset = CGPoint(x: 0, y: 0)
 //    

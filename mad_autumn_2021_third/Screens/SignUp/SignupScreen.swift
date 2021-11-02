@@ -33,7 +33,7 @@ struct SignupScreen: View {
                 }.buttonStyle(BS.general).padding(.bottom, 58)
             }.padding(.horizontal, 16)
 
-            MyActivityIndicator(isLoading: vm.isLoading)
+            
         }.navigationBarTransparent(true).navigationBarTitle("", displayMode: .inline)
     }
 }
