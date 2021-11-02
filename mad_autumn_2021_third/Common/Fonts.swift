@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 
 extension Font {
-    static var regular = Font.custom("BalooPaaji2-Regular", size: 20)
-    static var bold = Font.custom("BalooPaaji2-Bold", size: 20)
-    static var medium = Font.custom("BalooPaaji2-Medium", size: 20)
+   // static var regular = Font.custom("BalooPaaji2-Regular", size: 20)
+    static var title = Font.custom("BalooPaaji2-Bold", size: 36)
+    static var plain = Font.custom("BalooPaaji2-Bold", size: 20)
+    //static var medium = Font.custom("BalooPaaji2-Medium", size: 20)
 }

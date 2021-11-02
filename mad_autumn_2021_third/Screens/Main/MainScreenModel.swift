@@ -9,14 +9,11 @@ import Foundation
 import Alamofire
 import SwiftUI
 
-class MainScreenModel: ObservableObject {
+class MainScreenModel: ViewModel {
     let nm = NetworkService.shared
-    var alertText = ""
-    @Published var alert = false
     @Published var isLoading = false
-    
     @Published var users: [UserModel] = []
-    
+    var usersOffset = 0
     
     var liked: [UserModel] = (try? JSONDecoder().decode([UserModel].self, from: UserDefaults.standard.data(forKey: "liked") ?? .init())) ?? [] {
         didSet {
@@ -24,24 +21,28 @@ class MainScreenModel: ObservableObject {
         }
     }
 
-    init() {
+    override init(_ alert: AlertInfo) {
+        super.init(alert)
+        
         guard Alamofire.NetworkReachabilityManager.default?.isReachable == true else {
-            self.alertText = "Нет интернета!"
-            self.alert = true
+            self.alert.info = "Нет интернета!"
             return
         }
 
-        isLoading = true
-        
-        nm.users { [self] res in
+        loadUsers()
+    }
+    
+    func loadUsers() {
+        isLoading = users.isEmpty
+        nm.users(offset: usersOffset) { [self] res in
             isLoading = false
             switch res {
             case let .success(users):
                 self.users = users
+                self.usersOffset += users.count
                 
-            case let .failure(err):
-                self.alertText = "Ошибка при получении юзеров"
-                self.alert = true
+            case .failure:
+                self.alert.info = "Ошибка при получении юзеров"
             }
         }
     }
@@ -60,11 +61,14 @@ class MainScreenModel: ObservableObject {
     
     func feedback(_ feedback: Bool) {
         guard let userId = users.first?.userId else { return }
-        withAnimation {
+        _ = withAnimation {
             users.remove(at: 0)
+            if users.count <= 4 {
+                loadUsers()
+            }
         }
         
-        isLoading = true
+        //isLoading = true TODO: uncomment
         nm.feedback(feedback, userId: userId) { res in
             self.isLoading = false
             
@@ -72,9 +76,8 @@ class MainScreenModel: ObservableObject {
             case let .success(users): break
                // self.users = users
                 
-            case let .failure(err):
-                self.alertText = "Ошибка при оценке"
-                self.alert = true
+            case let .failure(err): break
+                //self.alert.info = "Ошибка при оценке" TODO: uncomment
             }
         }
     }

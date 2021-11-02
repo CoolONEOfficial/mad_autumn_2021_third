@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		85B464AA272EC0C30007255C /* mad_autumn_2021_thirdApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464A9272EC0C30007255C /* mad_autumn_2021_thirdApp.swift */; };
-		85B464AC272EC0C30007255C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464AB272EC0C30007255C /* ContentView.swift */; };
+		85B464AC272EC0C30007255C /* TabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464AB272EC0C30007255C /* TabbedView.swift */; };
 		85B464AE272EC0C60007255C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B464AD272EC0C60007255C /* Assets.xcassets */; };
 		85B464B1272EC0C60007255C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B464B0272EC0C60007255C /* Preview Assets.xcassets */; };
 		85B464B9272EC0E20007255C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464B8272EC0E20007255C /* NetworkService.swift */; };
@@ -33,12 +33,37 @@
 		85B464EE272EE4220007255C /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464EC272EE4220007255C /* ChatScreen.swift */; };
 		85B464F3272EEE440007255C /* OneChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464F1272EEE440007255C /* OneChatScreen.swift */; };
 		85B464F4272EEE440007255C /* OneChatScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464F2272EEE440007255C /* OneChatScreenModel.swift */; };
+		85B46519273059840007255C /* BalooPaaji2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85B46514273059830007255C /* BalooPaaji2-Medium.ttf */; };
+		85B4651A273059840007255C /* BalooPaaji2-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85B46515273059830007255C /* BalooPaaji2-SemiBold.ttf */; };
+		85B4651B273059840007255C /* BalooPaaji2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85B46516273059830007255C /* BalooPaaji2-Regular.ttf */; };
+		85B4651C273059840007255C /* BalooPaaji2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85B46517273059840007255C /* BalooPaaji2-ExtraBold.ttf */; };
+		85B4651D273059840007255C /* BalooPaaji2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85B46518273059840007255C /* BalooPaaji2-Bold.ttf */; };
+		85B4652027305B920007255C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85B4651F27305B920007255C /* Launch Screen.storyboard */; };
+		85B4652427306D3E0007255C /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4652227306D3E0007255C /* StartScreen.swift */; };
+		85B4652527306D3E0007255C /* StartScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4652327306D3E0007255C /* StartScreenModel.swift */; };
+		85B4652C27306D580007255C /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4652727306D570007255C /* LoginScreen.swift */; };
+		85B4652D27306D580007255C /* LoginScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4652827306D570007255C /* LoginScreenModel.swift */; };
+		85B4652E27306D580007255C /* SignupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4652A27306D580007255C /* SignupScreen.swift */; };
+		85B4652F27306D580007255C /* SignupScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4652B27306D580007255C /* SignupScreenModel.swift */; };
+		85B4653227306DDD0007255C /* NetworkService+auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4653127306DDD0007255C /* NetworkService+auth.swift */; };
+		85B4653427306E420007255C /* NetworkService+feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4653327306E420007255C /* NetworkService+feedback.swift */; };
+		85B4653727306E6C0007255C /* TopicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4653627306E6C0007255C /* TopicModel.swift */; };
+		85B4653927306E720007255C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4653827306E720007255C /* UserModel.swift */; };
+		85B4653B27306E790007255C /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4653A27306E790007255C /* MessageModel.swift */; };
+		85B4653D27306E7F0007255C /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4653C27306E7F0007255C /* ChatModel.swift */; };
+		85B4653F27306EE10007255C /* NetworkService+users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4653E27306EE10007255C /* NetworkService+users.swift */; };
+		85B4654127306EF20007255C /* NetworkService+chats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4654027306EF20007255C /* NetworkService+chats.swift */; };
+		85B4654327306F0F0007255C /* NetworkService+messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4654227306F0F0007255C /* NetworkService+messages.swift */; };
+		85B4654527306FE60007255C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4654427306FE60007255C /* ContentView.swift */; };
+		85B465482730741D0007255C /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B465472730741D0007255C /* MyTextField.swift */; };
+		85B4654A273076490007255C /* MyActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B46549273076490007255C /* MyActivityIndicator.swift */; };
+		85B4654C2730ABF10007255C /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4654B2730ABF10007255C /* Alerts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		85B464A6272EC0C30007255C /* mad_autumn_2021_third.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mad_autumn_2021_third.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B464A9272EC0C30007255C /* mad_autumn_2021_thirdApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mad_autumn_2021_thirdApp.swift; sourceTree = "<group>"; };
-		85B464AB272EC0C30007255C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		85B464AB272EC0C30007255C /* TabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedView.swift; sourceTree = "<group>"; };
 		85B464AD272EC0C60007255C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85B464B0272EC0C60007255C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		85B464B8272EC0E20007255C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -56,6 +81,32 @@
 		85B464EC272EE4220007255C /* ChatScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
 		85B464F1272EEE440007255C /* OneChatScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneChatScreen.swift; sourceTree = "<group>"; };
 		85B464F2272EEE440007255C /* OneChatScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneChatScreenModel.swift; sourceTree = "<group>"; };
+		85B46514273059830007255C /* BalooPaaji2-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooPaaji2-Medium.ttf"; sourceTree = "<group>"; };
+		85B46515273059830007255C /* BalooPaaji2-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooPaaji2-SemiBold.ttf"; sourceTree = "<group>"; };
+		85B46516273059830007255C /* BalooPaaji2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooPaaji2-Regular.ttf"; sourceTree = "<group>"; };
+		85B46517273059840007255C /* BalooPaaji2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooPaaji2-ExtraBold.ttf"; sourceTree = "<group>"; };
+		85B46518273059840007255C /* BalooPaaji2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooPaaji2-Bold.ttf"; sourceTree = "<group>"; };
+		85B4651E273059940007255C /* mad-autumn-2021-third-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "mad-autumn-2021-third-Info.plist"; sourceTree = SOURCE_ROOT; };
+		85B4651F27305B920007255C /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		85B4652227306D3E0007255C /* StartScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreen.swift; sourceTree = "<group>"; };
+		85B4652327306D3E0007255C /* StartScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenModel.swift; sourceTree = "<group>"; };
+		85B4652727306D570007255C /* LoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		85B4652827306D570007255C /* LoginScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenModel.swift; sourceTree = "<group>"; };
+		85B4652A27306D580007255C /* SignupScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupScreen.swift; sourceTree = "<group>"; };
+		85B4652B27306D580007255C /* SignupScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupScreenModel.swift; sourceTree = "<group>"; };
+		85B4653127306DDD0007255C /* NetworkService+auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+auth.swift"; sourceTree = "<group>"; };
+		85B4653327306E420007255C /* NetworkService+feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+feedback.swift"; sourceTree = "<group>"; };
+		85B4653627306E6C0007255C /* TopicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicModel.swift; sourceTree = "<group>"; };
+		85B4653827306E720007255C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		85B4653A27306E790007255C /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		85B4653C27306E7F0007255C /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		85B4653E27306EE10007255C /* NetworkService+users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+users.swift"; sourceTree = "<group>"; };
+		85B4654027306EF20007255C /* NetworkService+chats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+chats.swift"; sourceTree = "<group>"; };
+		85B4654227306F0F0007255C /* NetworkService+messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+messages.swift"; sourceTree = "<group>"; };
+		85B4654427306FE60007255C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		85B465472730741D0007255C /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
+		85B46549273076490007255C /* MyActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActivityIndicator.swift; sourceTree = "<group>"; };
+		85B4654B2730ABF10007255C /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +146,15 @@
 		85B464A8272EC0C30007255C /* mad_autumn_2021_third */ = {
 			isa = PBXGroup;
 			children = (
+				85B4651F27305B920007255C /* Launch Screen.storyboard */,
+				85B465132730596D0007255C /* fonts */,
+				85B4651E273059940007255C /* mad-autumn-2021-third-Info.plist */,
 				85B464CB272EC2D50007255C /* Common */,
 				85B464C9272EC2860007255C /* Screens */,
 				85B464B7272EC0D70007255C /* Services */,
 				85B464A9272EC0C30007255C /* mad_autumn_2021_thirdApp.swift */,
-				85B464AB272EC0C30007255C /* ContentView.swift */,
+				85B464AB272EC0C30007255C /* TabbedView.swift */,
+				85B4654427306FE60007255C /* ContentView.swift */,
 				85B464AD272EC0C60007255C /* Assets.xcassets */,
 				85B464AF272EC0C60007255C /* Preview Content */,
 			);
@@ -117,6 +172,7 @@
 		85B464B7272EC0D70007255C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				85B4653027306DCD0007255C /* Network */,
 				85B464B8272EC0E20007255C /* NetworkService.swift */,
 			);
 			path = Services;
@@ -125,6 +181,9 @@
 		85B464C9272EC2860007255C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				85B4652627306D570007255C /* Login */,
+				85B4652927306D580007255C /* SignUp */,
+				85B4652127306D3E0007255C /* Start */,
 				85B464F0272EEE1B0007255C /* OneChat */,
 				85B464EA272EE3E20007255C /* Chat */,
 				85B464E5272EDF990007255C /* User */,
@@ -147,10 +206,13 @@
 		85B464CB272EC2D50007255C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				85B46546273074110007255C /* Views */,
+				85B4653527306E640007255C /* Models */,
 				85B464CE272EC2F20007255C /* ButtonStyles.swift */,
 				85B464CD272EC2F20007255C /* Colors.swift */,
 				85B464CC272EC2F20007255C /* Fonts.swift */,
 				85B464CF272EC2F20007255C /* TFStyles.swift */,
+				85B4654B2730ABF10007255C /* Alerts.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -188,6 +250,77 @@
 				85B464F2272EEE440007255C /* OneChatScreenModel.swift */,
 			);
 			path = OneChat;
+			sourceTree = "<group>";
+		};
+		85B465132730596D0007255C /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				85B46518273059840007255C /* BalooPaaji2-Bold.ttf */,
+				85B46517273059840007255C /* BalooPaaji2-ExtraBold.ttf */,
+				85B46514273059830007255C /* BalooPaaji2-Medium.ttf */,
+				85B46516273059830007255C /* BalooPaaji2-Regular.ttf */,
+				85B46515273059830007255C /* BalooPaaji2-SemiBold.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		85B4652127306D3E0007255C /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				85B4652227306D3E0007255C /* StartScreen.swift */,
+				85B4652327306D3E0007255C /* StartScreenModel.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		85B4652627306D570007255C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				85B4652727306D570007255C /* LoginScreen.swift */,
+				85B4652827306D570007255C /* LoginScreenModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		85B4652927306D580007255C /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				85B4652A27306D580007255C /* SignupScreen.swift */,
+				85B4652B27306D580007255C /* SignupScreenModel.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		85B4653027306DCD0007255C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				85B4653127306DDD0007255C /* NetworkService+auth.swift */,
+				85B4653327306E420007255C /* NetworkService+feedback.swift */,
+				85B4653E27306EE10007255C /* NetworkService+users.swift */,
+				85B4654027306EF20007255C /* NetworkService+chats.swift */,
+				85B4654227306F0F0007255C /* NetworkService+messages.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		85B4653527306E640007255C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				85B4653627306E6C0007255C /* TopicModel.swift */,
+				85B4653827306E720007255C /* UserModel.swift */,
+				85B4653A27306E790007255C /* MessageModel.swift */,
+				85B4653C27306E7F0007255C /* ChatModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		85B46546273074110007255C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				85B465472730741D0007255C /* MyTextField.swift */,
+				85B46549273076490007255C /* MyActivityIndicator.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,8 +399,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85B4651A273059840007255C /* BalooPaaji2-SemiBold.ttf in Resources */,
+				85B4651B273059840007255C /* BalooPaaji2-Regular.ttf in Resources */,
+				85B4652027305B920007255C /* Launch Screen.storyboard in Resources */,
 				85B464B1272EC0C60007255C /* Preview Assets.xcassets in Resources */,
+				85B4651C273059840007255C /* BalooPaaji2-ExtraBold.ttf in Resources */,
+				85B46519273059840007255C /* BalooPaaji2-Medium.ttf in Resources */,
 				85B464AE272EC0C60007255C /* Assets.xcassets in Resources */,
+				85B4651D273059840007255C /* BalooPaaji2-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,19 +418,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				85B464F3272EEE440007255C /* OneChatScreen.swift in Sources */,
+				85B4652D27306D580007255C /* LoginScreenModel.swift in Sources */,
 				85B464D5272EC3640007255C /* MainScreen.swift in Sources */,
 				85B464EE272EE4220007255C /* ChatScreen.swift in Sources */,
 				85B464D0272EC2F20007255C /* Fonts.swift in Sources */,
+				85B4654127306EF20007255C /* NetworkService+chats.swift in Sources */,
 				85B464D2272EC2F20007255C /* ButtonStyles.swift in Sources */,
+				85B4653427306E420007255C /* NetworkService+feedback.swift in Sources */,
+				85B4653F27306EE10007255C /* NetworkService+users.swift in Sources */,
 				85B464D3272EC2F20007255C /* TFStyles.swift in Sources */,
+				85B4654C2730ABF10007255C /* Alerts.swift in Sources */,
 				85B464E8272EDFC30007255C /* UserScreen.swift in Sources */,
 				85B464E3272ED6E20007255C /* ProfileScreen.swift in Sources */,
+				85B4654A273076490007255C /* MyActivityIndicator.swift in Sources */,
+				85B4652527306D3E0007255C /* StartScreenModel.swift in Sources */,
+				85B4653227306DDD0007255C /* NetworkService+auth.swift in Sources */,
+				85B4652C27306D580007255C /* LoginScreen.swift in Sources */,
 				85B464E4272ED6E20007255C /* ProfileScreenModel.swift in Sources */,
 				85B464DC272ECB1B0007255C /* CardView.swift in Sources */,
+				85B4652E27306D580007255C /* SignupScreen.swift in Sources */,
+				85B4653927306E720007255C /* UserModel.swift in Sources */,
 				85B464D1272EC2F20007255C /* Colors.swift in Sources */,
 				85B464ED272EE4220007255C /* ChatScreenModel.swift in Sources */,
-				85B464AC272EC0C30007255C /* ContentView.swift in Sources */,
+				85B464AC272EC0C30007255C /* TabbedView.swift in Sources */,
+				85B4654327306F0F0007255C /* NetworkService+messages.swift in Sources */,
+				85B4654527306FE60007255C /* ContentView.swift in Sources */,
 				85B464B9272EC0E20007255C /* NetworkService.swift in Sources */,
+				85B465482730741D0007255C /* MyTextField.swift in Sources */,
+				85B4653D27306E7F0007255C /* ChatModel.swift in Sources */,
+				85B4652427306D3E0007255C /* StartScreen.swift in Sources */,
+				85B4653727306E6C0007255C /* TopicModel.swift in Sources */,
+				85B4653B27306E790007255C /* MessageModel.swift in Sources */,
+				85B4652F27306D580007255C /* SignupScreenModel.swift in Sources */,
 				85B464AA272EC0C30007255C /* mad_autumn_2021_thirdApp.swift in Sources */,
 				85B464D7272EC36D0007255C /* MainScreenModel.swift in Sources */,
 				85B464F4272EEE440007255C /* OneChatScreenModel.swift in Sources */,
@@ -425,11 +583,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mad_autumn_2021_third/Preview Content\"";
+				DEVELOPMENT_TEAM = 99C2LB4W93;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "mad-autumn-2021-third-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = ScareMe;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -454,11 +616,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mad_autumn_2021_third/Preview Content\"";
+				DEVELOPMENT_TEAM = 99C2LB4W93;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "mad-autumn-2021-third-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = ScareMe;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

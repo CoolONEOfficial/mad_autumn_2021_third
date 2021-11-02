@@ -10,10 +10,8 @@ import Alamofire
 import SwiftUI
 import SwiftUIX
 
-class ProfileScreenModel: ObservableObject {
+class ProfileScreenModel: ViewModel {
     let nm = NetworkService.shared
-    var alertText = ""
-    @Published var alert = false
     @Published var isLoading = false
     
     @Published var party: String? = UserDefaults.standard.string(forKey: "party") {
@@ -22,27 +20,27 @@ class ProfileScreenModel: ObservableObject {
         }
     }
     
-    init() {
-//        guard Alamofire.NetworkReachabilityManager.default?.isReachable == true else {
-//            self.alertText = "Нет интернета!"
-//            self.alert = true
-//            return
-//        }
-//
-//        isLoading = true
-//
-//        nm.users { [self] res in
-//            isLoading = false
-//            switch res {
-//            case let .success(users):
-//                self.users = users
-//
-//            case let .failure(err):
-//                self.alertText = "Ошибка при получении юзеров"
-//                self.alert = true
-//            }
-//        }
-    }
+//    init() {
+////        guard Alamofire.NetworkReachabilityManager.default?.isReachable == true else {
+////            self.alert.info = "Нет интернета!"
+////            self.alert = true
+////            return
+////        }
+////
+////        isLoading = true
+////
+////        nm.users { [self] res in
+////            isLoading = false
+////            switch res {
+////            case let .success(users):
+////                self.users = users
+////
+////            case let .failure(err):
+////                self.alert.info = "Ошибка при получении юзеров"
+////                self.alert = true
+////            }
+////        }
+//    }
 //    
 //    func like() {
 //    
@@ -69,7 +67,7 @@ class ProfileScreenModel: ObservableObject {
 //               // self.users = users
 //                
 //            case let .failure(err):
-//                self.alertText = "Ошибка при оценке"
+//                self.alert.info = "Ошибка при оценке"
 //                self.alert = true
 //            }
 //        }

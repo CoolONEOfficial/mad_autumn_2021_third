@@ -9,10 +9,8 @@ import Foundation
 import Alamofire
 import SwiftUI
 
-class ChatScreenModel: ObservableObject {
+class ChatScreenModel: ViewModel {
     let nm = NetworkService.shared
-    var alertText = ""
-    @Published var alert = false
     @Published var isLoading = false
     
     var liked: [UserModel] = (try? JSONDecoder().decode([UserModel].self, from: UserDefaults.standard.data(forKey: "liked") ?? .init())) ?? [] {
@@ -23,7 +21,9 @@ class ChatScreenModel: ObservableObject {
     
     @Published var chats: [ChatModel] = []
     
-    init() {
+    override init(_ alert: AlertInfo) {
+        super.init(alert)
+        
         isLoading = true
         nm.chats { [self] res in
             self.isLoading = false
@@ -32,8 +32,7 @@ class ChatScreenModel: ObservableObject {
                 self.chats = chats
                 
             case let .failure(err):
-                self.alertText = "Ошибка при получении чатов"
-                self.alert = true
+                self.alert.info = "Ошибка при получении чатов"
             }
         }
     }

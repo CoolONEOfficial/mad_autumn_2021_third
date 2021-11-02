@@ -2,69 +2,49 @@
 //  ContentView.swift
 //  mad_autumn_2021_third
 //
-//  Created by Nickolay Truhin on 31.10.2021.
+//  Created by Nickolay Truhin on 01.11.2021.
 //
 
 import SwiftUI
-
+import SwiftUIX
 
 struct ContentView: View {
-    enum Tab: Int {
-        case main = 0
-        case chat
+
+    @StateObject var alert: AlertInfo = .init(nil)
+    
+    init() {
+        UINavigationBar.appearance().tintColor = .white
+ 
         
-        @ViewBuilder
-        var screen: some View {
-            switch self {
-            case .main:
-                MainScreen()
-                
-            case .chat:
-                ChatScreen()
-            }
+    }
+    
+    @StateObject var networkService = NetworkService.shared
+//
+//    @State var token: AuthResp? = (try? JSONDecoder().decode(AuthResp.self, from: UserDefaults.standard.data(forKey: "token") ?? .init())) {
+//        didSet {
+//            UserDefaults.standard.set(try? JSONEncoder().encode(token), forKey: "token")
+//        }
+//    }
+    
+    
+    
+    @ViewBuilder
+    var content: some View {
+        if networkService.token?.accessToken != nil, networkService.token?.accessTokenDate?.isInFuture == true {
+            TabbedView()
+        } else {
+            StartScreen(vm: .init(alert))
         }
     }
     
-    @State var tab: Tab = .main
-    
-    
-    
     var body: some View {
-        
-        
-        NavigationView {
-            ZStack(alignment: .top) {
-                Rectangle().ignoresSafeArea()
-                tab.screen
-                VStack(spacing: 0) {
-                    
-                    Spacer()
-                    
-                    HStack {
-                        Button(action: {
-                            tab = .main
-                        }) {
-                            Image("fire" + (tab == .main ? "Sel" : "")).resizable().scaledToFit().height(tab == .main ? 54 : 26)
-                        }
-                        Spacer()
-                        Button(action: {
-                            tab = .chat
-                        }) {
-                            Image("message" + (tab == .chat ? "Sel" : "")).resizable().scaledToFit().height(tab == .chat ? 54 : 26)
-                        }
-                        Spacer()
-                        NavigationLink(destination: {
-                            ProfileScreen()
-                        }, label: {
-                            Image("profile").resizable().scaledToFit().height(26)
-                        })
-                    }.padding(23).height(54)
-                    
-                    
-                }
-            }.navigationBarHidden(true)
+        content.environmentObject(alert).alert(isPresented: .init(get: {
+            alert.info != nil
+        }, set: {
+            alert.info = $0 ? alert.info : nil
+        })) {
+            alert.info ?? .init(title: Text(""), message: nil, dismissButton: nil)
         }
-        
     }
 }
 

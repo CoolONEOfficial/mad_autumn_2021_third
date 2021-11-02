@@ -11,7 +11,7 @@ import SDWebImageSwiftUI
 
 struct ChatScreen: View {
     
-    @StateObject var vm = ChatScreenModel()
+    @StateObject var vm: ChatScreenModel
     
 //    @State var offset = CGPoint(x: 0, y: 0)
 //    
@@ -20,6 +20,8 @@ struct ChatScreen: View {
     @State var openChat = false
     @State var chat: ChatModel?
     
+    @EnvironmentObject var alert: AlertInfo
+    
     var body: some View {
        // NavigationView {
             ZStack(alignment: .top) {
@@ -27,7 +29,7 @@ struct ChatScreen: View {
                 
                 ScrollView(.vertical) {
                     LazyVStack(alignment: .leading) {
-                        Text("Last").font(.regular).fontSize(36).foregroundColor(.white)
+                        Text("Last").font(.plain).fontSize(36).foregroundColor(.white)
                         
                         ScrollView(.horizontal) {
                             LazyHStack(spacing: 16) {
@@ -35,13 +37,13 @@ struct ChatScreen: View {
                                     let user = entry.element
                                     VStack(spacing: 8) {
                                         WebImage(url: user.avatar).resizable().scaledToFill().height(82).width(82).cornerRadius(41)
-                                        Text(user.name).font(.regular).fontSize(14).foregroundColor(.white)
+                                        Text(user.name).font(.plain).fontSize(14).foregroundColor(.white)
                                     }
                                 }
                             }
                         }.height(115)
                         
-                        Text("Messages").font(.regular).fontSize(36).foregroundColor(.white)
+                        Text("Messages").font(.plain).fontSize(36).foregroundColor(.white)
                         
                         ForEach(enumerating: Array(vm.chats.enumerated()), id: \.offset) { index, entry in
                             let chat = entry.element
@@ -50,8 +52,8 @@ struct ChatScreen: View {
                                 WebImage(url: chat.chat.avatar).resizable().scaledToFill().height(82).width(82).cornerRadius(41)
                                 
                                 VStack(spacing: 8) {
-                                    Text(chat.chat.title).font(.regular).fontSize(16).foregroundColor(.white)//.lineLimit(1)
-                                    Text(chat.lastMessage.text).font(.regular).fontSize(16).foregroundColor(.white)//.lineLimit(2)
+                                    Text(chat.chat.title).font(.plain).fontSize(16).foregroundColor(.white)//.lineLimit(1)
+                                    Text(chat.lastMessage.text).font(.plain).fontSize(16).foregroundColor(.white)//.lineLimit(2)
                                 }
                             }.height(82).onTapGesture {
                                 self.chat = chat
@@ -61,16 +63,12 @@ struct ChatScreen: View {
                     }
                     if let chat = chat {
                     NavigationLink("", isActive: $openChat) {
-                        OneChatScreen(vm: .init(chat ))
+                        OneChatScreen(vm: .init(alert, chat ))
                         
                     }.hidden()
                     }
-                }.alert(isPresented: $vm.alert) {
-                    Alert(title: "Message!", message: vm.alertText, dismissButtonTitle: "OK")
                 }.padding(.horizontal, 21)
-                if vm.isLoading {
-                    ActivityIndicator().animated(true)
-                }
+                MyActivityIndicator(isLoading: vm.isLoading)
                 
             }.navigationBarHidden(true)
             .onAppear {

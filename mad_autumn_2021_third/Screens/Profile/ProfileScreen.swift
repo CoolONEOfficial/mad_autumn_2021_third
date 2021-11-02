@@ -11,7 +11,7 @@ import SwiftDate
 
 struct ProfileScreen: View {
     
-    @StateObject var vm = ProfileScreenModel()
+    @StateObject var vm: ProfileScreenModel
     
     @State var date: Date = .init()
     @State var picker = false
@@ -26,7 +26,7 @@ struct ProfileScreen: View {
                 Rectangle().ignoresSafeArea()
                 
                 VStack(alignment: .leading) {
-                    Text("Party Date").font(.regular).fontSize(16).foregroundColor(.white)
+                    Text("Party Date").font(.plain).fontSize(16).foregroundColor(.white)
                     
                     if picker {
                         Button(date.toFormat("dd MMMM YYYY - HH:mm")) {
@@ -44,11 +44,7 @@ struct ProfileScreen: View {
                         save()
                     }.buttonStyle(BS.general)
                 }.padding(.horizontal, 21)
-                if vm.isLoading {
-                    ActivityIndicator().animated(true)
-                }
-            }.alert(isPresented: $vm.alert) {
-                Alert(title: "Message!", message: vm.alertText, dismissButtonTitle: "OK")
+                MyActivityIndicator(isLoading: vm.isLoading)
             }.navigationBarHidden(true)
             
         }

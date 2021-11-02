@@ -26,13 +26,13 @@ struct UserScreen: View {
                 PartRoundedRectangle(corners: [.bottomLeading, .bottomTrailing], cornerRadii: 40).fill(Color.accentBg).ignoresSafeArea().height(344)
                 VStack(alignment: .center) {
                     WebImage(url: data.avatar).resizable().scaledToFill().width(168).height(168).padding(.top, 70).padding(.bottom, 10)
-                    Text(data.name).font(.regular).fontSize(36).padding(.bottom, 55)
+                    Text(data.name).font(.plain).fontSize(36).padding(.bottom, 55)
                     HStack(spacing: 8) {
                         ForEach(data.topics, id: \.id) { topic in
-                            Text(topic.title).font(.regular).fontSize(14).padding(.horizontal, 8).height(25).background(Color.orange).cornerRadius(12)
+                            Text(topic.title).font(.plain).fontSize(14).padding(.horizontal, 8).height(25).background(Color.orange).cornerRadius(12)
                         }
                     }.padding(.bottom, 30)
-                    Text(data.aboutMyself).font(.regular).fontSize(14).foregroundColor(.white)
+                    Text(data.aboutMyself ?? "").font(.plain).fontSize(14).foregroundColor(.white)
                     Spacer()
                     HStack {
                         Button(action: {

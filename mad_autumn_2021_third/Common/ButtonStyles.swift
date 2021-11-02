@@ -20,7 +20,7 @@ struct GeneralButtonStyle: ButtonStyle {
     
     func makeBody(configuration: Configuration) -> some View {
         RoundedRectangle(cornerRadius: 16).fill(.orange).overlay {
-            configuration.label.foregroundColor(.darkText).font(.regular).fontSize(16)
+            configuration.label.foregroundColor(.darkText).font(.plain).fontSize(16)
         }.height(56).scaleEffect(configuration.isPressed ? 0.9 : 1)
     }
 }
@@ -28,8 +28,8 @@ struct GeneralButtonStyle: ButtonStyle {
 struct UnderlinedButtonStyle: ButtonStyle {
     
     func makeBody(configuration: Configuration) -> some View {
-        configuration.label.foregroundColor(.orange).font(.regular).fontSize(16).overlay(alignment: .bottom) {
-            Rectangle().fill(Color.orange).height(1).maxWidth(.infinity)
+        configuration.label.foregroundColor(.orange).font(.plain).fontSize(16).overlay(alignment: .bottom) {
+            Rectangle().fill(Color.orange).height(1).maxWidth(.infinity).padding(.bottom, 8)
         }.scaleEffect(configuration.isPressed ? 0.9 : 1)
     }
 }
@@ -37,6 +37,6 @@ struct UnderlinedButtonStyle: ButtonStyle {
 struct DarkButtonStyle: ButtonStyle {
     
     func makeBody(configuration: Configuration) -> some View {
-        configuration.label.foregroundColor(.darkOrange).font(.regular).fontSize(16).scaleEffect(configuration.isPressed ? 0.9 : 1)
+        configuration.label.foregroundColor(.darkOrange).font(.plain).fontSize(16).scaleEffect(configuration.isPressed ? 0.9 : 1)
     }
 }

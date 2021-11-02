@@ -14,14 +14,16 @@ class OneChatScreenModel: ObservableObject {
     let chatModel: ChatModel
     
     let nm = NetworkService.shared
-    var alertText = ""
-    @Published var alert = false
     @Published var isLoading = false
     
     @Published var messages: [MessageModel] = []
     
-    init(_ chatModel: ChatModel) {
+    var alert: AlertInfo
+    
+    init(_ alert: AlertInfo, _ chatModel: ChatModel) {
+        self.alert = alert
         self.chatModel = chatModel
+
         isLoading = true
         nm.messages(chatId: chatModel.chat.id) { [self] res in
             self.isLoading = false
@@ -30,8 +32,7 @@ class OneChatScreenModel: ObservableObject {
                 self.messages = messages
                 
             case let .failure(err):
-                self.alertText = "Ошибка при получении сообщений"
-                self.alert = true
+                self.alert.info = "Ошибка при получении сообщений"
             }
         }
     }
