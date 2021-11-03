@@ -13,10 +13,6 @@ struct ChatListScreen: View {
     
     @StateObject var vm: ChatListScreenModel
     
-//    @State var offset = CGPoint(x: 0, y: 0)
-//    
-//    @State var showUser = false
-    
     @State var openChat = false
     @State var chat: ChatModel?
     

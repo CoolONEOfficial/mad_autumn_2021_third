@@ -16,7 +16,7 @@ class UsersModel: ViewModel {
     var usersOffset = 0
 
     func didFeedback() {
-        _ = withAnimation {
+        withAnimation {
             users.remove(at: 0)
             if users.count <= 4 {
                 loadUsers()

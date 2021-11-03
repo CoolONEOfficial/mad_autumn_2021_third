@@ -27,7 +27,7 @@ struct UserScreen: View {
                 VStack(alignment: .center) {
                     WebImage(url: data.avatar).resizable().scaledToFill().width(168).height(168).padding(.top, 70).padding(.bottom, 10)
                     Text(data.name).font(.plain).fontSize(36).padding(.bottom, 55)
-                    HStack(spacing: 8) {
+                    LazyHGrid(rows: [ .init(.adaptive(minimum:50)), .init(.adaptive(minimum:50)), .init(.adaptive(minimum:50)), .init(.adaptive(minimum:50)) ], spacing: 8) {
                         ForEach(data.topics, id: \.id) { topic in
                             Text(topic.title).font(.plain).fontSize(14).padding(.horizontal, 8).height(25).background(Color.orange).cornerRadius(12)
                         }

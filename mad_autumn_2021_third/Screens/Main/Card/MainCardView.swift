@@ -67,7 +67,6 @@ struct MainCardView: View {
                 })
             )
             .offset(x: isLast ? offset.x : 0, y: isLast ? offset.y / 3 : 0)
-            .id(vm.data.userId)
         NavigationLink("", isActive: $showUser) {
             UserScreen(data: vm.data, like: vm.like, dislike: vm.dislike, isOpen: $showUser)
         }.hidden()
