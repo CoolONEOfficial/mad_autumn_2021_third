@@ -12,7 +12,7 @@ struct MessageModel: Codable {
     let id: String
     
     let text: String
-    let createdAt: DateInRegion
+    //let createdAt: DateInRegion
     let user: UserModel
     
 }

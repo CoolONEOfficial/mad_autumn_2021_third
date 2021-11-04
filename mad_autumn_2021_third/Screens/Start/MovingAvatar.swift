@@ -36,7 +36,6 @@ struct MovingAvatar: View {
                 .onReceive(timer) { _ in
                     let nextX = offset.x + acceleration.x
                     let nextY = offset.y + acceleration.y
-                    debugPrint("nx: \(nextX) ny: \(nextY)")
                     if !(-Self.speed / 2...proxy.size.width - Self.size + Self.speed / 2 ~= nextX) {
                         acceleration = .init(width: -acceleration.width, height: acceleration.height)
                     }

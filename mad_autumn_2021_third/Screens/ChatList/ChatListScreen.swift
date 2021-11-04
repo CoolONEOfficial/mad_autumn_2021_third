@@ -47,10 +47,13 @@ struct ChatListScreen: View {
                             HStack(spacing: 16) {
                                 AvatarView(url: chat.chat.avatar).scaledToFill().height(82).width(82).cornerRadius(41)
                                 
-                                VStack(spacing: 8) {
-                                    Text(chat.chat.title).font(.plain).fontSize(16).foregroundColor(.white)//.lineLimit(1)
-                                    Text(chat.lastMessage.text).font(.plain).fontSize(16).foregroundColor(.white)//.lineLimit(2)
-                                }
+                                HStack {
+                                    VStack(alignment: .leading, spacing: 8) {
+                                        Text(chat.chat.title.isEmpty ? "Anonym" : chat.chat.title).font(.plain).fontSize(16).foregroundColor(.white)//.lineLimit(1)
+                                        Text(chat.lastMessage?.text ?? "Chat just created...").font(.plain).fontSize(16).foregroundColor(.white)//.lineLimit(2)
+                                    }
+                                    Spacer()
+                                }.overlay(alignment: .bottom) { Rectangle().fill(.orange).height(1) }
                             }.height(82).onTapGesture {
                                 self.chat = chat
                                 self.openChat = true

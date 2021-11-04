@@ -14,4 +14,12 @@ extension NetworkService {
             completion(resp.result)
         }
     }
+    
+    func sendMessage(chatId: String, text: String, completion: @escaping (Result<MessageModel, AFError>) -> Void) {
+        AF.upload(multipartFormData: { test in
+            test.append(text.data(using: .utf8)!, withName: "text")
+        }, to: baseUrl + "/v1/chat/\(chatId)/message", method: .post, headers: authorizationHeaders).responseDecodable(of: MessageModel.self) { resp in
+            completion(resp.result)
+        }
+    }
 }

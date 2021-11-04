@@ -18,14 +18,38 @@ struct ChatScreen: View {
 //    @State var showUser = false
     
     var body: some View {
-        ScrollView(.vertical) {
-            LazyVStack {
-                ForEach(enumerating: Array(vm.messages.enumerated()), id: \.offset) { index, entry in
-                    let message = entry.element
+        VStack {
+            HStack(spacing: 25) {
+                AvatarView(url: vm.chatModel.chat.avatar).scaledToFill().height(82).width(82).cornerRadius(41)
+                VStack(spacing: 25) {
+                    Text(vm.chatModel.chat.title.isEmpty ? "Anonym" : vm.chatModel.chat.title).font(.title)
                     
-                    Text(message.text)
+                }
+                Spacer()
+            }.padding(.vertical, 28)
+            ScrollView(.vertical) {
+                LazyVStack {
+                    ForEach(enumerating: Array(vm.messages.enumerated()), id: \.offset) { index, entry in
+                        let message = entry.element
+                        let fromMe = message.user.userId == vm.nm.profile?.userId ?? ""
+                        HStack {
+                            if fromMe {
+                                Spacer()
+                            }
+                            MessageView(message: message, fromMe: fromMe)
+                            if !fromMe {
+                                Spacer()
+                            }
+                        }
+                    }
                 }
             }
+            HStack(spacing: 19) {
+                MyTextField("Message", text: $vm.text, nil, multiline: false)
+                Button(action: { vm.send() }) {
+                    Image("send").resizable().width(24).height(24).padding(8).background(Color.accentBg).clipCircle()
+                }
+            }.padding(.vertical, 8).padding(.horizontal, 16).overlay(alignment: .top) { Rectangle().fill(Color.accentBg).height(0.5) }
         }
        // NavigationView {
 //            ZStack(alignment: .top) {

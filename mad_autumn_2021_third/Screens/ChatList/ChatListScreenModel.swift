@@ -18,26 +18,26 @@ class ChatListScreenModel: ViewModel {
         }
     }
     
-    @Published var chats: [ChatModel] = []
-    
-    override init(_ notifications: Notifications) {
-        super.init(notifications)
+    @Published var chats: [ChatModel] = [] {
+        didSet {
+            debugPrint("set \(chats.count)")
+        }
+    }
+
+    func appear() {
+        liked = (try? JSONDecoder().decode([UserModel].self, from: UserDefaults.standard.data(forKey: "liked") ?? .init())) ?? []
         
         notifications.isLoading = true
         nm.chats { [self] res in
             self.notifications.isLoading = false
             switch res {
-            case let .success(chats): break
+            case let .success(chats):
                 self.chats = chats
                 
             case let .failure(err):
                 self.notifications.alert = "Ошибка при получении чатов"
             }
         }
-    }
-    
-    func appear() {
-        liked = (try? JSONDecoder().decode([UserModel].self, from: UserDefaults.standard.data(forKey: "liked") ?? .init())) ?? []
     }
 
 }

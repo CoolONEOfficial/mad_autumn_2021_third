@@ -26,7 +26,7 @@ class MainCardViewModel: ObservableObject {
         nm.profile { result in
             switch result {
             case let .success(model):
-                self.matches = model.topics.filter { topic in data.topics.contains { $0.id == topic.id } }.count
+                self.matches = model.topics?.filter { topic in data.topics?.contains { $0.id == topic.id } ?? false }.count ?? 0
 
             case .failure:
                 self.notifications.alert = "Не удалось получить данные пользователя"

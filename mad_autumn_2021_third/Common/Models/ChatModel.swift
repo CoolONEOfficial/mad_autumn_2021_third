@@ -16,5 +16,5 @@ struct ChatModel: Codable {
         let avatar: URL?
     }
     
-    let lastMessage: MessageModel
+    let lastMessage: MessageModel?
 }

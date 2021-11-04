@@ -32,15 +32,15 @@ class ProfileScreenModel: ViewModel {
     @State var date: Date = .init()
 
     func isSelected(_ topic: TopicModel) -> Bool {
-        profile?.topics.contains { $0.id == topic.id } == true
+        profile?.topics?.contains { $0.id == topic.id } == true
     }
     
     func toggleTopic(_ topic: TopicModel) {
         withAnimation {
             if isSelected(topic) {
-                profile?.topics.removeAll { $0.id == topic.id }
+                profile?.topics?.removeAll { $0.id == topic.id }
             } else {
-                profile?.topics.append(topic)
+                profile?.topics?.append(topic)
             }
         }
     }

@@ -16,5 +16,5 @@ struct UserModel: Codable, Equatable {
     var name: String = ""
     var aboutMyself: String?
     var avatar: URL?
-    var topics: [TopicModel] = []
+    var topics: [TopicModel]? = nil
 }

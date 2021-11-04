@@ -100,7 +100,7 @@ struct ProfileScreen: View {
                 }.overlay(alignment: .bottom) {
                     Button("Save") {
                         vm.save { _ in
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                 open = false
                             }
                         }

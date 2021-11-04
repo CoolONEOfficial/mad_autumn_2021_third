@@ -64,6 +64,7 @@
 		85B7E58C2733F386008DEE7C /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 85B7E58B2733F386008DEE7C /* Introspect */; };
 		85B7E58F2733FC81008DEE7C /* MediaCore in Frameworks */ = {isa = PBXBuildFile; productRef = 85B7E58E2733FC81008DEE7C /* MediaCore */; };
 		85B7E5912733FC81008DEE7C /* MediaSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 85B7E5902733FC81008DEE7C /* MediaSwiftUI */; };
+		85B7E5A927348BF4008DEE7C /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B7E5A827348BF4008DEE7C /* MessageView.swift */; };
 		85F5733727333A3000C050AE /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5733627333A3000C050AE /* AvatarView.swift */; };
 		85F5733927333D6500C050AE /* NetworkService+profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5733827333D6500C050AE /* NetworkService+profile.swift */; };
 		85F5733E2733411900C050AE /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 85F5733D2733411900C050AE /* SwiftyJSON */; };
@@ -121,6 +122,7 @@
 		85B465472730741D0007255C /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
 		85B46549273076490007255C /* MyActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActivityIndicator.swift; sourceTree = "<group>"; };
 		85B4654B2730ABF10007255C /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		85B7E5A827348BF4008DEE7C /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		85F5733627333A3000C050AE /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		85F5733827333D6500C050AE /* NetworkService+profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+profile.swift"; sourceTree = "<group>"; };
 		85F573422733492F00C050AE /* NetworkService+topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+topic.swift"; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 			children = (
 				85B464F1272EEE440007255C /* ChatScreen.swift */,
 				85B464F2272EEE440007255C /* ChatScreenModel.swift */,
+				85B7E5A827348BF4008DEE7C /* MessageView.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				85B4654C2730ABF10007255C /* Notifications.swift in Sources */,
 				85F5733727333A3000C050AE /* AvatarView.swift in Sources */,
 				85B464E8272EDFC30007255C /* UserScreen.swift in Sources */,
+				85B7E5A927348BF4008DEE7C /* MessageView.swift in Sources */,
 				85B464E3272ED6E20007255C /* ProfileScreen.swift in Sources */,
 				85F573432733492F00C050AE /* NetworkService+topic.swift in Sources */,
 				85B4654A273076490007255C /* MyActivityIndicator.swift in Sources */,
