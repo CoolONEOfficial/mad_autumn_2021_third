@@ -11,3 +11,10 @@ struct TopicModel: Codable {
     let title: String
     let id: String
 }
+
+extension TopicModel: Identifiable {
+}
+
+extension TopicModel: Equatable {
+    
+}

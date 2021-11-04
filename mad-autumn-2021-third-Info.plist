@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>UIUserInterfaceStyle</key>
-	<string>Light</string>
+	<string>Dark</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>jff</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>BalooPaaji2-Medium.ttf</string>

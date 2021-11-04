@@ -59,7 +59,7 @@
         <image name="previewLogo" width="375" height="396"/>
         <image name="previewText" width="250" height="77"/>
         <namedColor name="previewBg">
-            <color red="0.24313725490196078" green="0.10980392156862745" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.24300000071525574" green="0.10999999940395355" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

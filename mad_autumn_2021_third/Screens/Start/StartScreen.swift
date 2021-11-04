@@ -14,7 +14,6 @@ struct StartScreen: View {
     @StateObject var vm: StartScreenModel
     
     @State var signup = false
-    @State var login = false
     
     @EnvironmentObject var notifications: Notifications
     
@@ -34,15 +33,15 @@ struct StartScreen: View {
                         signup = true
                     }.buttonStyle(BS.general).padding(.bottom, 24)
                     Button("Already have an account?") {
-                        login = true
+                        vm.loginOpen = true
                     }.buttonStyle(BS.dark).padding(.bottom, 8)
                     Button("Sign In") {
-                        login = true
+                        vm.loginOpen = true
                     }.buttonStyle(BS.underlined).padding(.bottom, 37)
                     NavigationLink("", isActive: $signup, destination: {
                         SignupScreen(vm: .init(notifications))
                     }).hidden()
-                    NavigationLink("", isActive: $login, destination: {
+                    NavigationLink("", isActive: $vm.loginOpen, destination: {
                         LoginScreen(vm: .init(notifications))
                     }).hidden()
                 }.ignoresSafeArea(SafeAreaRegions.all, edges: .top).padding(.horizontal, 16).navigationBarTransparent(true)

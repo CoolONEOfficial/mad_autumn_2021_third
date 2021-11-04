@@ -22,10 +22,10 @@ struct UserScreen: View {
     var body: some View {
         NavigationView {
             ZStack(alignment: .top) {
-                Rectangle().ignoresSafeArea()
+                Rectangle().fill(Color.background).ignoresSafeArea()
                 PartRoundedRectangle(corners: [.bottomLeading, .bottomTrailing], cornerRadii: 40).fill(Color.accentBg).ignoresSafeArea().height(344)
                 VStack(alignment: .center) {
-                    WebImage(url: data.avatar).resizable().scaledToFill().width(168).height(168).padding(.top, 70).padding(.bottom, 10)
+                    AvatarView(url: data.avatar).width(168).height(168).padding(.top, 70).padding(.bottom, 10)
                     Text(data.name).font(.plain).fontSize(36).padding(.bottom, 55)
                     LazyHGrid(rows: [ .init(.adaptive(minimum:50)), .init(.adaptive(minimum:50)), .init(.adaptive(minimum:50)), .init(.adaptive(minimum:50)) ], spacing: 8) {
                         ForEach(data.topics, id: \.id) { topic in

@@ -35,11 +35,11 @@ struct MainCardView: View {
     
     var body: some View {
         ZStack(alignment: .bottom) {
-            WebImage(url: vm.data.avatar).resizable().fill().background(Color.background).overlay(overlay).cornerRadius(13).clipped()
+            AvatarView(url: vm.data.avatar).fill().overlay(overlay).cornerRadius(13).clipped()
             HStack {
                 Text(vm.data.name).font(.plain).fontSize(21).foregroundColor(.white)
                 Spacer()
-                Text("5 Matches").font(.plain).fontSize(21).foregroundColor(.accentRed)
+                Text("\(vm.matches) Matches").font(.plain).fontSize(21).foregroundColor(.accentRed)
             }.padding(21).background(Color.accentBg).cornerRadius(13)
         }.padding(.bottom, CGFloat(index) * 13).padding(.horizontal, max(0, CGFloat(3 - index) * 13))
             .gesture(

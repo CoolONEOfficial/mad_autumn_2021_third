@@ -21,7 +21,7 @@ struct ChatListScreen: View {
     var body: some View {
        // NavigationView {
             ZStack(alignment: .top) {
-                Rectangle().ignoresSafeArea()
+                Rectangle().fill(Color.background).ignoresSafeArea()
                 
                 ScrollView(.vertical) {
                     LazyVStack(alignment: .leading) {
@@ -32,7 +32,7 @@ struct ChatListScreen: View {
                                 ForEach(enumerating: Array(vm.liked.sorted { $0.name < $1.name }.enumerated()), id: \.offset) { index, entry in
                                     let user = entry.element
                                     VStack(spacing: 8) {
-                                        WebImage(url: user.avatar).resizable().scaledToFill().background(Color.darkOrange).cornerRadius(41).height(82)
+                                        AvatarView(url: user.avatar).height(82).width(82).scaledToFill().background(Color.darkOrange).cornerRadius(41)
                                         Text(user.name).font(.plain).foregroundColor(.white)
                                     }.width(82)
                                 }
@@ -45,7 +45,7 @@ struct ChatListScreen: View {
                             let chat = entry.element
                             
                             HStack(spacing: 16) {
-                                WebImage(url: chat.chat.avatar).resizable().scaledToFill().height(82).width(82).cornerRadius(41)
+                                AvatarView(url: chat.chat.avatar).scaledToFill().height(82).width(82).cornerRadius(41)
                                 
                                 VStack(spacing: 8) {
                                     Text(chat.chat.title).font(.plain).fontSize(16).foregroundColor(.white)//.lineLimit(1)

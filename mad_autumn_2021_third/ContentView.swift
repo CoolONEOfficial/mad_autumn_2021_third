@@ -14,19 +14,10 @@ struct ContentView: View {
     
     init() {
         UINavigationBar.appearance().tintColor = .white
- 
-        
+        UITextView.appearance().backgroundColor = .clear
     }
-    
+
     @StateObject var networkService = NetworkService.shared
-//
-//    @State var token: AuthResp? = (try? JSONDecoder().decode(AuthResp.self, from: UserDefaults.standard.data(forKey: "token") ?? .init())) {
-//        didSet {
-//            UserDefaults.standard.set(try? JSONEncoder().encode(token), forKey: "token")
-//        }
-//    }
-    
-    
     
     @ViewBuilder
     var content: some View {

@@ -26,13 +26,14 @@ struct TabbedView: View {
     }
 
     @State var tab: Tab = .main
+    @State var profile = false
     
     @EnvironmentObject var notifications: Notifications
 
     var body: some View {
         NavigationView {
             ZStack(alignment: .top) {
-                Rectangle().ignoresSafeArea()
+                Rectangle().fill(Color.background).ignoresSafeArea()
                 tab.screen(notifications)
                 VStack(spacing: 0) {
                     Spacer()
@@ -49,14 +50,14 @@ struct TabbedView: View {
                             Image("message" + (tab == .chat ? "Sel" : "")).resizable().scaledToFit().height(tab == .chat ? 54 : 26)
                         }
                         Spacer()
-                        NavigationLink(destination: {
-                            ProfileScreen(vm: .init(notifications))
+                        NavigationLink(isActive: $profile, destination: {
+                            ProfileScreen(vm: .init(notifications), open: $profile)
                         }, label: {
                             Image("profile").resizable().scaledToFit().height(26)
                         })
                     }.padding(23).height(54)
                 }
-            }.navigationBarHidden(true)
+            }.navigationBarTitle("", displayMode: .inline).navigationBarHidden(true)
         }
     }
 }

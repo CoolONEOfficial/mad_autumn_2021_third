@@ -16,9 +16,10 @@ struct MainScreen: View {
     
     var body: some View {
         ZStack(alignment: .top) {
+            Rectangle().fill(Color.background).ignoresSafeArea()
             PartRoundedRectangle(corners: [.bottomLeading, .bottomTrailing], cornerRadii: 40).fill(Color.accentBg).ignoresSafeArea().height(344)
             VStack(alignment: .leading, spacing: 0) {
-                Text("Trick or Treat?").font(.plain).fontSize(36).foregroundColor(.white)
+                Text("Trick or Treat?").font(.title).foregroundColor(.white)
                 ZStack(alignment: .top) {
                     ForEach(enumerating: Array(vm.userModels.enumerated()), id: \.offset) { index, entry in
                         let isLast = 2 == index

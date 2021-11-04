@@ -24,6 +24,8 @@ class NetworkService: ObservableObject {
     deinit {
         AlamofireNetworkActivityLogger.NetworkActivityLogger.shared.stopLogging()
     }
+    
+    var profile: UserModel?
 
     @Published
     var token: AuthResp? = (try? JSONDecoder().decode(AuthResp.self, from: UserDefaults.standard.data(forKey: "token") ?? .init())) {

@@ -25,7 +25,6 @@
 		85B464D0272EC2F20007255C /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464CC272EC2F20007255C /* Fonts.swift */; };
 		85B464D1272EC2F20007255C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464CD272EC2F20007255C /* Colors.swift */; };
 		85B464D2272EC2F20007255C /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464CE272EC2F20007255C /* ButtonStyles.swift */; };
-		85B464D3272EC2F20007255C /* TFStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464CF272EC2F20007255C /* TFStyles.swift */; };
 		85B464D5272EC3640007255C /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464D4272EC3640007255C /* MainScreen.swift */; };
 		85B464D7272EC36D0007255C /* MainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B464D6272EC36D0007255C /* MainScreenModel.swift */; };
 		85B464DA272ECA2C0007255C /* AlamofireNetworkActivityLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 85B464D9272ECA2C0007255C /* AlamofireNetworkActivityLogger */; };
@@ -62,6 +61,14 @@
 		85B465482730741D0007255C /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B465472730741D0007255C /* MyTextField.swift */; };
 		85B4654A273076490007255C /* MyActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B46549273076490007255C /* MyActivityIndicator.swift */; };
 		85B4654C2730ABF10007255C /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4654B2730ABF10007255C /* Notifications.swift */; };
+		85B7E58C2733F386008DEE7C /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 85B7E58B2733F386008DEE7C /* Introspect */; };
+		85B7E58F2733FC81008DEE7C /* MediaCore in Frameworks */ = {isa = PBXBuildFile; productRef = 85B7E58E2733FC81008DEE7C /* MediaCore */; };
+		85B7E5912733FC81008DEE7C /* MediaSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 85B7E5902733FC81008DEE7C /* MediaSwiftUI */; };
+		85F5733727333A3000C050AE /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5733627333A3000C050AE /* AvatarView.swift */; };
+		85F5733927333D6500C050AE /* NetworkService+profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F5733827333D6500C050AE /* NetworkService+profile.swift */; };
+		85F5733E2733411900C050AE /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 85F5733D2733411900C050AE /* SwiftyJSON */; };
+		85F573432733492F00C050AE /* NetworkService+topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F573422733492F00C050AE /* NetworkService+topic.swift */; };
+		85F5734B273357BA00C050AE /* SwiftUIFlowLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 85F5734A273357BA00C050AE /* SwiftUIFlowLayout */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,7 +86,6 @@
 		85B464CC272EC2F20007255C /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		85B464CD272EC2F20007255C /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		85B464CE272EC2F20007255C /* ButtonStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
-		85B464CF272EC2F20007255C /* TFStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFStyles.swift; sourceTree = "<group>"; };
 		85B464D4272EC3640007255C /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		85B464D6272EC36D0007255C /* MainScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenModel.swift; sourceTree = "<group>"; };
 		85B464E1272ED6E20007255C /* ProfileScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
@@ -115,6 +121,9 @@
 		85B465472730741D0007255C /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
 		85B46549273076490007255C /* MyActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActivityIndicator.swift; sourceTree = "<group>"; };
 		85B4654B2730ABF10007255C /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		85F5733627333A3000C050AE /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		85F5733827333D6500C050AE /* NetworkService+profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+profile.swift"; sourceTree = "<group>"; };
+		85F573422733492F00C050AE /* NetworkService+topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+topic.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,9 +133,14 @@
 			files = (
 				85B464DF272ECBDA0007255C /* SDWebImageSwiftUI in Frameworks */,
 				85B464C8272EC1830007255C /* Alamofire in Frameworks */,
+				85F5734B273357BA00C050AE /* SwiftUIFlowLayout in Frameworks */,
+				85B7E5912733FC81008DEE7C /* MediaSwiftUI in Frameworks */,
+				85F5733E2733411900C050AE /* SwiftyJSON in Frameworks */,
 				85B464C5272EC1770007255C /* DynamicColor in Frameworks */,
 				85B464C2272EC16C0007255C /* SwiftUIX in Frameworks */,
 				85B464DA272ECA2C0007255C /* AlamofireNetworkActivityLogger in Frameworks */,
+				85B7E58F2733FC81008DEE7C /* MediaCore in Frameworks */,
+				85B7E58C2733F386008DEE7C /* Introspect in Frameworks */,
 				85B464BF272EC15E0007255C /* PureSwiftUI in Frameworks */,
 				85B464BC272EC1280007255C /* SwiftDate in Frameworks */,
 			);
@@ -245,7 +259,6 @@
 				85B464CE272EC2F20007255C /* ButtonStyles.swift */,
 				85B464CD272EC2F20007255C /* Colors.swift */,
 				85B464CC272EC2F20007255C /* Fonts.swift */,
-				85B464CF272EC2F20007255C /* TFStyles.swift */,
 				85B4654B2730ABF10007255C /* Notifications.swift */,
 			);
 			path = Common;
@@ -335,6 +348,8 @@
 				85B4653E27306EE10007255C /* NetworkService+users.swift */,
 				85B4654027306EF20007255C /* NetworkService+chats.swift */,
 				85B4654227306F0F0007255C /* NetworkService+messages.swift */,
+				85F5733827333D6500C050AE /* NetworkService+profile.swift */,
+				85F573422733492F00C050AE /* NetworkService+topic.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -355,6 +370,7 @@
 			children = (
 				85B465472730741D0007255C /* MyTextField.swift */,
 				85B46549273076490007255C /* MyActivityIndicator.swift */,
+				85F5733627333A3000C050AE /* AvatarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -383,6 +399,11 @@
 				85B464C7272EC1830007255C /* Alamofire */,
 				85B464D9272ECA2C0007255C /* AlamofireNetworkActivityLogger */,
 				85B464DE272ECBDA0007255C /* SDWebImageSwiftUI */,
+				85F5733D2733411900C050AE /* SwiftyJSON */,
+				85F5734A273357BA00C050AE /* SwiftUIFlowLayout */,
+				85B7E58B2733F386008DEE7C /* Introspect */,
+				85B7E58E2733FC81008DEE7C /* MediaCore */,
+				85B7E5902733FC81008DEE7C /* MediaSwiftUI */,
 			);
 			productName = mad_autumn_2021_third;
 			productReference = 85B464A6272EC0C30007255C /* mad_autumn_2021_third.app */;
@@ -420,6 +441,10 @@
 				85B464C6272EC1820007255C /* XCRemoteSwiftPackageReference "Alamofire" */,
 				85B464D8272ECA2C0007255C /* XCRemoteSwiftPackageReference "AlamofireNetworkActivityLogger" */,
 				85B464DD272ECBDA0007255C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				85F5733C2733411900C050AE /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				85F57349273357BA00C050AE /* XCRemoteSwiftPackageReference "swiftui-flow-layout" */,
+				85B7E58A2733F386008DEE7C /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				85B7E58D2733FC81008DEE7C /* XCRemoteSwiftPackageReference "Media" */,
 			);
 			productRefGroup = 85B464A7272EC0C30007255C /* Products */;
 			projectDirPath = "";
@@ -463,10 +488,11 @@
 				85B464D2272EC2F20007255C /* ButtonStyles.swift in Sources */,
 				85B4653427306E420007255C /* NetworkService+feedback.swift in Sources */,
 				85B4653F27306EE10007255C /* NetworkService+users.swift in Sources */,
-				85B464D3272EC2F20007255C /* TFStyles.swift in Sources */,
 				85B4654C2730ABF10007255C /* Notifications.swift in Sources */,
+				85F5733727333A3000C050AE /* AvatarView.swift in Sources */,
 				85B464E8272EDFC30007255C /* UserScreen.swift in Sources */,
 				85B464E3272ED6E20007255C /* ProfileScreen.swift in Sources */,
+				85F573432733492F00C050AE /* NetworkService+topic.swift in Sources */,
 				85B4654A273076490007255C /* MyActivityIndicator.swift in Sources */,
 				85B4652527306D3E0007255C /* StartScreenModel.swift in Sources */,
 				85B4653227306DDD0007255C /* NetworkService+auth.swift in Sources */,
@@ -490,6 +516,7 @@
 				8559AF09273189FE00D6C657 /* FeedbackModel.swift in Sources */,
 				8559AF0B2731970500D6C657 /* UsersModel.swift in Sources */,
 				8559AF0F27319DC800D6C657 /* MovingAvatar.swift in Sources */,
+				85F5733927333D6500C050AE /* NetworkService+profile.swift in Sources */,
 				85B464AA272EC0C30007255C /* mad_autumn_2021_thirdApp.swift in Sources */,
 				85B464D7272EC36D0007255C /* MainScreenModel.swift in Sources */,
 				85B464F4272EEE440007255C /* ChatScreenModel.swift in Sources */,
@@ -761,6 +788,38 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		85B7E58A2733F386008DEE7C /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
+		85B7E58D2733FC81008DEE7C /* XCRemoteSwiftPackageReference "Media" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/crelies/Media.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		85F5733C2733411900C050AE /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		85F57349273357BA00C050AE /* XCRemoteSwiftPackageReference "swiftui-flow-layout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/globulus/swiftui-flow-layout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -798,6 +857,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 85B464DD272ECBDA0007255C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		85B7E58B2733F386008DEE7C /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B7E58A2733F386008DEE7C /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+		85B7E58E2733FC81008DEE7C /* MediaCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B7E58D2733FC81008DEE7C /* XCRemoteSwiftPackageReference "Media" */;
+			productName = MediaCore;
+		};
+		85B7E5902733FC81008DEE7C /* MediaSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B7E58D2733FC81008DEE7C /* XCRemoteSwiftPackageReference "Media" */;
+			productName = MediaSwiftUI;
+		};
+		85F5733D2733411900C050AE /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85F5733C2733411900C050AE /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		85F5734A273357BA00C050AE /* SwiftUIFlowLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85F57349273357BA00C050AE /* XCRemoteSwiftPackageReference "swiftui-flow-layout" */;
+			productName = SwiftUIFlowLayout;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

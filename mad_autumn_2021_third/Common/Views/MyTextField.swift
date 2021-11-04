@@ -6,29 +6,58 @@
 //
 
 import SwiftUI
+import SwiftUIX
+import Introspect
+
+//extension UIColor {
+//    static var placeholderT
+//}
+
+struct ResizeableTextEditor: View {
+    @Binding var text: String
+    
+    var body: some View {
+        ZStack {
+            TextEditor(text: $text)
+            Text(text).opacity(0).padding(8)
+        }
+    }
+}
 
 struct MyTextField: View {
-    init(_ placeholder: String, text: Binding<String>, _ contentType: UITextContentType? = nil) {
+    init(_ placeholder: String, text: Binding<String>, _ contentType: UITextContentType? = nil, multiline: Bool = false) {
         self.placeholder = placeholder
         self._text = text
         self.contentType = contentType
+        self.multiline = multiline
     }
 
     var placeholder: String
     @Binding var text: String
     var contentType: UITextContentType?
+    var multiline: Bool
 
     @ViewBuilder
     var field: some View {
-        if contentType == .password || contentType == .newPassword {
+        let pass = contentType == .password || contentType == .newPassword
+        if pass {
             SecureField("", text: $text)
-        } else {
+        } else if !multiline {
             TextField("", text: $text)
+        } else {
+            ResizeableTextEditor(text: $text).padding(.vertical, -8).padding(.horizontal, -4)
         }
     }
     
     var body: some View {
-        field.textFieldStyle(TF.general($text, placeholder)).textContentType(contentType)
+        field.font(.plain).textContentType(contentType).padding(.horizontal, 24).padding(.vertical, 8)
+            .background {
+                RoundedRectangle(cornerRadius: 16).fill(Color.darkBg).overlay(alignment: .topLeading) {
+                    if text.isEmpty {
+                        Text(placeholder).font(.plain).padding(.horizontal, 24).padding(.vertical, 8)
+                    }
+                }
+            }
     }
 }
 

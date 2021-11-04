@@ -29,7 +29,7 @@ struct ChatScreen: View {
         }
        // NavigationView {
 //            ZStack(alignment: .top) {
-//                Rectangle().ignoresSafeArea()
+//                Rectangle().fill(Color.background).ignoresSafeArea()
 //
 //                ScrollView(.vertical) {
 //                    LazyVStack(alignment: .leading) {

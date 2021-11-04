@@ -7,10 +7,14 @@
 
 import Foundation
 
-struct UserModel: Codable {
-    let userId: String
-    let name: String
-    let aboutMyself: String?
-    let avatar: URL?
-    let topics: [TopicModel]
+struct UserModel: Codable, Equatable {
+    static func == (lhs: UserModel, rhs: UserModel) -> Bool {
+        lhs.aboutMyself == rhs.aboutMyself && lhs.topics == rhs.topics && lhs.name == rhs.name
+    }
+    
+    var userId: String = ""
+    var name: String = ""
+    var aboutMyself: String?
+    var avatar: URL?
+    var topics: [TopicModel] = []
 }
